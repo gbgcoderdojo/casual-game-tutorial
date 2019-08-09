@@ -59,10 +59,11 @@ var challenges = [
   {
     challenge: "Studsboll",
     image: "bouncingball",
-    description: "Simulera en studsande boll, med hjälp av acceleration i y-led (gravitation). När bollen rör marken byter y-rörelsen riktning på enklaste sätt. Bollen ska ritas ut som en bild som roteras (rotation i samma riktning som bollen rör sig).",
+    description: "När programmet startar, står det 'TRYCK ENTER' mitt på skärmen. När detta sker, försvinner texten och en studsande boll syns istället. När bollen rör marken byter y-rörelsen riktning på enklaste sätt. Bollen ska ritas ut som en bild som roteras i samma riktning som bollen rör sig.",
     achiements: [
         "rita roterade bilder",
-        "accelerationsmekanik"
+        "accelerationsmekanik",
+        "hantera flera spelskärmar"
     ]
   },
   {
@@ -72,8 +73,7 @@ var challenges = [
     achiements: [
         "animation",
         "spelhändelser",
-        "retardation",
-        "hantera flera spelskärmar"
+        "retardation"
     ]
   },
   {
