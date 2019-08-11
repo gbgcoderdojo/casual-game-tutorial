@@ -10,6 +10,18 @@
   <meta name="author" content="Olof@CoderDojoGbg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <script src="https://unpkg.com/vue"></script>
+  <style>
+    ul {
+      list-style-type:none;
+    }
+    li {
+      color: blue;
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,26 +37,34 @@
     <div v-for="(c, i) in challenges">
 
       <div class="row">
-        <div class="twelve columns">
+        <div :id="'challenge' + i" class="twelve columns">
           <h3>Utmaning {{ i+1 }}: {{ c.challenge }}</h3>
         </div>
-      </div>
+      </div> <!-- /row -->
 
       <div class="row">
+        <div class="six columns">
+           <img width="100%" v-if="c.image" :src="getImageURL(c.image)">
+        </div>
+      </div> <!-- /row -->
+ 
 
-        <div class="eight columns">
+      <div class="row">
+        <div class="twelve columns">
           <p>{{ c.description }}</p>
+        </div>
+      </div> <!-- /row -->
+
+      <div class="row">
+        <div class="twelve columns">
           Låser upp:
-          <ul v-for="a in c.achiements">
-              <li>{{ a }}</li>
+          <ul v-for="a in c.achievements">
+              <li><img src="images/star.png"> {{ a }}</li>
           </ul>
         </div>
+      </div> <!-- /row -->
 
-        <div class="four columns">
-          <img width="100%" v-if="c.image" :src="getImageURL(c.image)">
-        </div>
-
-      </div>
+      <hr>
 
     </div>
   </div>
